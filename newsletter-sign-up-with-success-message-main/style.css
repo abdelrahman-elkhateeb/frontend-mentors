@@ -1,0 +1,235 @@
+:root {
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 100%, 67%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto-Bold", sans-serif;
+  background-color: var(--Charcoal-Grey);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  -webkit-border-radius: 1.75rem;
+  -moz-border-radius: 1.75rem;
+  -ms-border-radius: 1.75rem;
+  -o-border-radius: 1.75rem;
+  border-radius: 1.75rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 855px;
+  gap: 40px;
+}
+
+.card .left img {
+  width: 100%;
+}
+
+.card .wrap h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--Dark-Slate-Grey);
+}
+
+.card .wrap p {
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 2rem;
+}
+
+.card .wrap ul {
+  margin-bottom: 2.5rem;
+}
+
+.card .wrap .feat-list li {
+  display: flex;
+  align-items: center;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 400;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.card .wrap form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card .wrap form label {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: var(--Dark-Slate-Grey);
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .wrap form label p {
+  margin: 0;
+}
+
+.card .wrap form label .invalid-email {
+  color: var(--Tomato);
+  display: none;
+}
+
+.card .wrap form input {
+  border: 1px solid var(--Grey);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .wrap form input.invalid {
+  border-color: var(--Tomato);
+  background-color: hsla(4, 100%, 67%, 0.115);
+}
+
+.card .wrap form input:focus {
+  border: 1px;
+  outline: 1px solid var(--Tomato);
+}
+
+.card .wrap form button {
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border: 0;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.card .wrap form button:hover {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: linear-gradient(90deg, #ff527b, var(--Tomato));
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: 0;
+    width: max-content;
+    flex-direction: column;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    padding: 20px 0;
+    height: 100%;
+  }
+
+  .card .wrap {
+    display: grid;
+    place-items: center;
+  }
+  .card .wrap p {
+    margin: 20px;
+  }
+
+  .card .wrap form {
+    width: 80%;
+  }
+}
+
+.success-card {
+  background-color: var(--White);
+  width: 450px;
+  padding: 40px;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  display: grid;
+  place-content: center;
+  line-height: 1;
+  display: none;
+}
+
+.success-card.active {
+  display: block;
+}
+
+.success-card img {
+  width: 50px;
+  margin: 0.2rem 0;
+  display: block;
+}
+
+.success-card h1 {
+  font-size: 2.75rem;
+  color: var(--Dark-Slate-Grey);
+  margin: 2rem 0;
+}
+
+.success-card p {
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 2rem;
+}
+
+.success-card .reset {
+  color: var(--White);
+  padding: 15px 10px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-color: var(--Dark-Slate-Grey);
+  cursor: pointer;
+}
+.success-card .reset:hover {
+  background: linear-gradient(90deg, #ff527b, var(--Tomato));
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .success-card {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    
+  }
+}
